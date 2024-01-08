@@ -1,0 +1,146 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: white;
+    background-size: 300%;
+    transition: background 0.5s ease-in-out;
+    -webkit-transition: background 0.5s ease-in-out;
+    -moz-transition: background 0.5s ease-in-out;
+    -ms-transition: background 0.5s ease-in-out;
+    -o-transition: background 0.5s ease-in-out;
+}
+
+.container {
+    position: relative;
+    width: 600px;
+    height: 500px;
+    box-shadow: 3px 2px 4px rgb(55, 55, 55);
+    background-color: whitesmoke;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+
+    &.neon-glow {
+        animation: neon-glow-animation 1.5s infinite alternate;
+        -webkit-animation: neon-glow-animation 1.5s infinite alternate;
+    }
+
+    .wrapper {
+        width: 600px;
+        height: 500px;
+        box-shadow: 0px 2px 4px rgb(194, 194, 194);
+        background-color: whitesmoke;
+        overflow: hidden;
+        z-index: 3;
+
+        &.nav {
+            position: absolute;
+            top: 5%;
+            left: 0;
+            width: 100%;
+            height: 60px;
+            display: flex;
+            justify-content: space-around;
+            border-bottom: 1.2px solid gray;
+            z-index: 8;
+            background-color: whitesmoke;
+            color: darkblue;
+
+            a {
+                padding: 10px;
+                text-decoration: none;
+                color: gray;
+                font-size: 1.5rem;
+                transition: all 0.5s;
+                -webkit-transition: all 0.5s;
+                -moz-transition: all 0.5s;
+                -ms-transition: all 0.5s;
+                -o-transition: all 0.5s;
+
+                &.link {
+                    transition: all 0.5s ease-in-out;
+                    -webkit-transition: all 0.5s ease-in-out;
+                    -moz-transition: all 0.5s ease-in-out;
+                    -ms-transition: all 0.5s ease-in-out;
+                    -o-transition: all 0.5s ease-in-out;
+
+                    &:hover {
+                        background-color: gray;
+                        color: white;
+                    }
+
+                    &.tabOne {
+                        background-color: rgb(0, 221, 221);
+                        color: white;
+                    }
+
+                    &.tabTwo {
+                        background-color: #dd0031;
+                        color: white;
+                    }
+
+                    &.tabThree {
+                        background-color: #41b883;
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+
+    .info {
+        display: flex;
+        width: 600px;
+        height: 100%;
+        padding-top: 2rem;
+
+        .item {
+            border-radius: 20px;
+            -webkit-border-radius: 20px;
+            -moz-border-radius: 20px;
+            -ms-border-radius: 20px;
+            -o-border-radius: 20px;
+            width: 850px;
+            color: black;
+            background-color: whitesmoke;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            &.active i {
+                font-size: 9rem;
+            }
+        }
+    }
+}
+
+@keyframes neon-glow-animation {
+    0% {
+        box-shadow: 0px 0px 30px rgb(255, 0, 0);
+    }
+    100% {
+        box-shadow: 0px 0px 80px rgb(0, 34, 255);
+    }
+}
+
+@keyframes colorChange {
+    0% {
+        background-position: 0%;
+    }
+    100% {
+        background-position: 150%;
+    }
+}

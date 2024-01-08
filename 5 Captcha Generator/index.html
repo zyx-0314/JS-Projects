@@ -9,7 +9,16 @@
     <body>
         <div class="container">
             <h2 class="status" id="_status"></h2>
-            <div class="generator-box"><input type="text" id="_generator" class="generator" readonly /></div>
+            <div class="generator-box">
+                <input
+                    type="text"
+                    id="_generator"
+                    class="generator"
+                    readonly
+                    onmousedown="return false;"
+                    onselectstart="return false;"
+                />
+            </div>
             <div class="your-chance">
                 <input type="text" id="_client-text" class="client-text" placeholder="Enter the Code Above" />
             </div>
