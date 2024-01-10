@@ -17,19 +17,19 @@ body {
     perspective: 1000px;
     font-family: cursive;
     color: ghostwhite;
-}
 
-.letters .letter {
-    cursor: pointer;
-    display: inline-block;
-    user-select: none;
-    line-height: 0.8;
-    font-size: 5rem;
-}
+    .letter {
+        cursor: pointer;
+        display: inline-block;
+        user-select: none;
+        line-height: 0.8;
+        font-size: 5rem;
 
-.letters .letter.active {
-    animation: jump 1s ease-in-out;
-    transform-origin: bottom left;
+        &.active {
+            animation: jump 1s ease-in-out;
+            transform-origin: bottom left;
+        }
+    }
 }
 
 @keyframes jump {
