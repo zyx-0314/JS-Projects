@@ -1,4 +1,4 @@
-const lights = document.querySelectorAll('.light');
+const lights = document.querySelectorAll('#_light');
 const body = document.body;
 
 let active = 0;

@@ -19,6 +19,7 @@ body {
     color: ghostwhite;
 
     .letter {
+        overflow: hidden;
         cursor: pointer;
         display: inline-block;
         user-select: none;

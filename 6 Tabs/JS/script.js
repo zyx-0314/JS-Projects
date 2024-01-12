@@ -1,10 +1,10 @@
-const tabOne = document.querySelector('.react');
-const tabTwo = document.querySelector('.angular');
-const tabThree = document.querySelector('.vue');
+const tabOne = document.getElementById('_react');
+const tabTwo = document.getElementById('_angular');
+const tabThree = document.getElementById('_vue');
 
-const item = document.querySelectorAll('.item');
-const icon = document.querySelector('.big-icon');
-const active = document.querySelector('.active');
+const item = document.querySelectorAll('#_item');
+const icon = document.getElementById('_big-icon');
+const active = document.getElementById('_active');
 
 const body = document.body;
 
