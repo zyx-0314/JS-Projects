@@ -1,0 +1,78 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    transform: all 0.2s ease;
+    background-color: aqua;
+    -webkit-transform: all 0.2s ease;
+    -moz-transform: all 0.2s ease;
+    -ms-transform: all 0.2s ease;
+    -o-transform: all 0.2s ease;
+}
+
+.container {
+    background-color: gray;
+    width: 25rem;
+    height: 8rem;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+    .light {
+        background-color: black;
+        border-radius: 100%;
+        position: relative;
+        height: 2rem;
+        width: 2rem;
+        margin: 1rem;
+        transition: all 0.2 ease;
+        -webkit-border-radius: 100%;
+        -moz-border-radius: 100%;
+        -ms-border-radius: 100%;
+        -o-border-radius: 100%;
+        -webkit-transition: all 0.2 ease;
+        -moz-transition: all 0.2 ease;
+        -ms-transition: all 0.2 ease;
+        -o-transition: all 0.2 ease;
+        /* seperate here */
+        &.active {
+            background-color: var(--light-color);
+            box-shadow: 0px 0px 20px 5px var(--light-color);
+        }
+
+        &.Light1 {
+            --light-color: aqua;
+        }
+
+        &.Light2 {
+            --light-color: red;
+        }
+
+        &.Light3 {
+            --light-color: yellow;
+        }
+
+        &.Light4 {
+            --light-color: green;
+        }
+
+        &.Light5 {
+            --light-color: blue;
+        }
+
+        &.Light6 {
+            --light-color: purple;
+        }
+    }
+}
