@@ -1,0 +1,93 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(45deg, #f7f4ba, #af4261);
+    min-height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 100vh;
+
+    .title {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: black;
+        margin-bottom: 2rem;
+    }
+
+    .cardHolder {
+        display: grid;
+        justify-content: space-between;
+        gap: 1rem;
+        width: 90%;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        padding: 1rem;
+
+        .card {
+            border-radius: 0.5rem;
+            padding: 1rem;
+            background: linear-gradient(
+                45deg,
+                #ff2c7d 0%,
+                #ff2c7d 42%,
+                #ffffff 42%,
+                #ffffff 45%,
+                #ff2c7d 45%,
+                #ff2c7d 48%,
+                #ffffff 48%,
+                #ffffff 51%,
+                #ff2c7d 51%,
+                #ff2c7d 54%,
+                #ffffff 54%,
+                #ffffff 57%,
+                #ff2c7d 57%,
+                #ff2c7d 60%,
+                #ffffff 60%,
+                #ffffff 100%
+            );
+            background-size: 300%;
+            box-shadow: 2px 3px 5px white;
+            transition: 0.5s ease-in-out;
+
+            .cardTitle {
+                color: white;
+                transition: 0.3s ease-in-out;
+                font-size: 1.5rem;
+                font-weight: 500;
+                margin-bottom: 1.5rem;
+            }
+
+            &:hover {
+                animation: colorChange 0.3s ease-in-out;
+                box-shadow: 3px 5px 5px #ff2c7d;
+                background-position: 100%;
+
+                .cardTitle {
+                    color: #ff2c7d;
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+}
+
+@keyframes colorChange {
+    0% {
+        background-position: 0%;
+    }
+    100% {
+        background-position: 100%;
+    }
+}
