@@ -1,8 +1,8 @@
-document.addEventListener('mousemove', (e) => {
-	const body = document.body;
-	const scratcher = document.createElement('span');
+document.addEventListener("mousemove", (e) => {
+    const body = document.body;
+    const scratcher = document.createElement("span");
 
-	scratcher.style.left = -17 + e.pageX + 'px';
-	scratcher.style.top = -17 + e.pageY + 'px';
-	body.appendChild(scratcher);
+    scratcher.style.left = -17 + e.pageX + "px";
+    scratcher.style.top = -17 + e.pageY + "px";
+    body.appendChild(scratcher);
 });

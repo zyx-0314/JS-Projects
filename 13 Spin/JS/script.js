@@ -1,14 +1,14 @@
-const squares = document.querySelectorAll('#_square');
+const squares = document.querySelectorAll("#_square");
 
 squares.forEach((square, index) => {
-	square.style.borderWidth = (index + 1) * 4 + 'px';
-	square.style.animationName = `rotate-${index}`;
+    square.style.borderWidth = (index + 1) * 4 + "px";
+    square.style.animationName = `rotate-${index}`;
 
-	const degree = (index + 1) * 360 * 2;
+    const degree = (index + 1) * 360 * 2;
 
-	const animation = document.createElement('style');
+    const animation = document.createElement("style");
 
-	animation.innerHTML = `@keyframes rotate-${index}{
+    animation.innerHTML = `@keyframes rotate-${index}{
     to{
       transform: translate(-50%, -50%) rotate(${degree}deg);
       border-radius: 50%;
@@ -17,5 +17,5 @@ squares.forEach((square, index) => {
     }
   }`;
 
-	document.body.appendChild(animation);
+    document.body.appendChild(animation);
 });

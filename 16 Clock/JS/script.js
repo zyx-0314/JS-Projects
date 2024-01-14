@@ -15,32 +15,32 @@ month.innerHTML = date.toLocaleString("default", {month: "long"});
 day.innerHTML = date.getDate() + "th" + ", " + dayOfTheWeek[date.getDay()];
 
 setInterval(() => {
-    const date = new Date();
-    time.innerHTML = date.toLocaleTimeString();
+    const currentDate = new Date();
+    time.innerHTML = currentDate.toLocaleTimeString();
 }, 1000);
 
-card.addEventListener("mouseenter", (e) => {
-    month.classList.toggle("hovering");
-    day.classList.toggle("hovering");
-    sideButton.classList.toggle("hovering");
-});
-
-card.addEventListener("mouseleave", (e) => {
-    month.classList.toggle("hovering");
-    day.classList.toggle("hovering");
-    sideButton.classList.toggle("hovering");
-});
-
-sideButton.addEventListener("click", (e) => {
-    allElement.forEach((element) => {
-        element.classList.toggle("dark");
+function toggleClasses(elements, className) {
+    elements.forEach((element) => {
+        element.classList.toggle(className);
     });
+}
+
+card.addEventListener("mouseenter", () => {
+    toggleClasses([month, day, sideButton], "hovering");
 });
 
-sideButton.addEventListener("mouseenter", (e) => {
+card.addEventListener("mouseleave", () => {
+    toggleClasses([month, day, sideButton], "hovering");
+});
+
+sideButton.addEventListener("click", () => {
+    toggleClasses(allElement, "dark");
+});
+
+sideButton.addEventListener("mouseenter", () => {
     sideButton.classList.toggle("hovering");
 });
 
-sideButton.addEventListener("mouseleave", (e) => {
+sideButton.addEventListener("mouseleave", () => {
     sideButton.classList.toggle("hovering");
 });

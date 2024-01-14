@@ -1,25 +1,21 @@
-const card = document.querySelectorAll('#_card');
-window.addEventListener('scroll', animatedCards);
+const card = document.querySelector("#_card");
 
 function animatedCards() {
-	const checkingBottom = (window.innerHeight / 4) * (100 / 25);
-	const checkingTop =
-		window.innerHeight - (window.innerHeight / 4) * (100 / 25);
+    const checkingBottom = (window.innerHeight / 4) * (100 / 25);
+    const checkingTop = window.innerHeight - (window.innerHeight / 4) * (100 / 25);
 
-	card.forEach((singleCard, index) => {
-		const cardTop = singleCard.getBoundingClientRect().top;
-		const cardBottom = singleCard.getBoundingClientRect().bottom;
+    const cardTop = card.getBoundingClientRect().top;
+    const cardBottom = card.getBoundingClientRect().bottom;
 
-		if (cardTop < checkingBottom) {
-			singleCard.classList.add('active');
-		} else {
-			singleCard.classList.remove('active');
-		}
+    if (cardTop < checkingBottom) {
+        card.classList.add("active");
+    } else {
+        card.classList.remove("active");
+    }
 
-		if (cardBottom > checkingTop) {
-			singleCard.classList.remove('shrinked');
-		} else {
-			singleCard.classList.add('shrinked');
-		}
-	});
+    if (cardBottom > checkingTop) {
+        card.classList.remove("shrinked");
+    } else {
+        card.classList.add("shrinked");
+    }
 }
