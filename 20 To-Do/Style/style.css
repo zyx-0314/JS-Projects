@@ -1,0 +1,174 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(to right bottom, rgba(255, 11, 11, 0.8), rgba(189, 144, 144, 0.6));
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    margin: 1rem;
+    border-radius: 5px;
+    width: fit-content;
+    border: 1px solid #000;
+    background-color: #fff;
+    width: 500px;
+
+    .heading {
+        padding: 0.5rem;
+        width: 100%;
+        font-size: 1.3rem;
+        letter-spacing: 2px;
+        margin-bottom: 0.3rem;
+        text-align: center;
+        box-shadow: 0 5px 3px rgba(0, 0, 0, 0.2);
+    }
+
+    form {
+        padding: 0.5rem 1rem 0 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        width: 100%;
+
+        input {
+            width: inherit;
+            padding: 0.5rem;
+            padding-top: 1rem;
+            margin-bottom: 1rem;
+            outline: none;
+            border: none;
+            border-bottom: 1px solid #000;
+            font-size: 1rem;
+
+            &::placeholder {
+                transition: all 0.2s ease-in-out;
+            }
+
+            &:focus {
+                border-bottom: 2px solid #000;
+
+                &::placeholder {
+                    transform: translatex(1.3rem);
+                    opacity: 0;
+                }
+            }
+        }
+
+        button {
+            width: fit-content;
+            padding: 0.5rem 1rem;
+            border-radius: 3px;
+            outline: none;
+            font-size: 0.8rem;
+            margin-bottom: 1rem;
+            cursor: pointer;
+            transition: all 0.1s ease-in-out;
+            border: 0.8px solid #000;
+
+            &:hover {
+                background-color: #000;
+                color: #fff;
+            }
+
+            &:disabled {
+                background-color: #efefef;
+                border: 0.8px solid #ccc;
+                color: #ccc;
+                cursor: not-allowed;
+            }
+        }
+    }
+
+    .content {
+        padding: 0.5rem 1rem 0 1rem;
+        border: 1px solid #000;
+        width: inherit;
+        height: fit-content;
+
+        .list {
+            list-style-type: none;
+            margin-bottom: 5px;
+            .item {
+                border-radius: 3px;
+                margin-bottom: 0.3rem;
+                padding: 0.5rem;
+                transition: all 0.2s ease-in-out;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                &:nth-child(odd) {
+                    background-color: #ddd;
+                }
+
+                &:nth-child(even) {
+                    background-color: #f1f1f1;
+                }
+
+                &:hover {
+                    background-color: #ccc;
+                }
+
+                .checkbox {
+                    width: 1rem;
+                    height: 1rem;
+                    border: 1px solid #000;
+                    background-color: #fff;
+                    border-radius: 50%;
+                    cursor: pointer;
+                    appearance: none;
+                    -moz-appearance: none;
+                    -webkit-appearance: none;
+                    -o-appearance: none;
+
+                    &:checked {
+                        background-color: #000;
+                    }
+                }
+
+                .item-text {
+                    width: 100%;
+                    padding: 0 1rem;
+
+                    &.done {
+                        text-decoration: line-through;
+                    }
+                }
+
+                .delete {
+                    background-color: #fc5858;
+                    padding: 0.3rem 0.5rem;
+                    border-radius: 2px;
+                    color: white;
+                    cursor: pointer;
+                    transition: all 0.2s ease-in-out;
+                    border-color: transparent;
+
+                    &:hover {
+                        background-color: #ff0000;
+                    }
+                }
+            }
+        }
+
+        .doneHeader {
+            display: none;
+
+            &.active {
+                display: block;
+            }
+        }
+    }
+}
