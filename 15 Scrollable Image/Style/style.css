@@ -1,0 +1,74 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    flex-direction: column;
+    margin-top: 1rem;
+    background-color: aquamarine;
+    color: blue;
+    overflow-x: hidden;
+}
+
+.card {
+    background: url("https://png.pngtree.com/background/20230426/original/pngtree-photo-of-blue-flowers-is-in-dark-atmosphere-picture-image_2486608.jpg");
+    background-size: cover;
+    height: 250px;
+    width: 500px;
+    margin: 1rem;
+    padding: 1rem;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    overflow: hidden;
+
+    transition: all 1s ease;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    h2 {
+        margin: 1rem;
+    }
+
+    &:nth-child(even) {
+        transform: translateX(-200%) rotate(90deg) scale(0.1);
+        -webkit-transform: translateX(-200%) rotate(90deg) scale(0.1);
+        -moz-transform: translateX(-200%) rotate(90deg) scale(0.1);
+        -ms-transform: translateX(-200%) rotate(90deg) scale(0.1);
+        -o-transform: translateX(-200%) rotate(90deg) scale(0.1);
+    }
+
+    &:nth-child(odd) {
+        transform: translateX(200%) rotate(-90deg) scale(0.1);
+        -webkit-transform: translateX(200%) rotate(-90deg) scale(0.1);
+        -moz-transform: translateX(200%) rotate(-90deg) scale(0.1);
+        -ms-transform: translateX(200%) rotate(-90deg) scale(0.1);
+        -o-transform: translateX(200%) rotate(-90deg) scale(0.1);
+    }
+
+    &.active {
+        transform: translateX(0) rotate(0) scale(1);
+        -webkit-transform: translateX(0) rotate(0) scale(1);
+        -moz-transform: translateX(0) rotate(0) scale(1);
+        -ms-transform: translateX(0) rotate(0) scale(1);
+        -o-transform: translateX(0) rotate(0) scale(1);
+    }
+
+    &.shrinked {
+        transform: translateX(0) rotate(0) scale(0.1);
+        -webkit-transform: translateX(0) rotate(0) scale(0.1);
+        -moz-transform: translateX(0) rotate(0) scale(0.1);
+        -ms-transform: translateX(0) rotate(0) scale(0.1);
+        -o-transform: translateX(0) rotate(0) scale(0.1);
+    }
+}
