@@ -52,7 +52,7 @@
     {
         "title": "Search Box",
         "description": "Build a stylish and functional search box, optimizing user search experiences.",
-        "link": "./11 Search Box"
+        "link": "./11 Search"
     },
     {
         "title": "Light",
@@ -72,7 +72,7 @@
     {
         "title": "Scrolling Images",
         "description": "Implement scrolling images for a sleek and interactive user interface.",
-        "link": "./15 Scrolling Images"
+        "link": "./15 Scrollable Image"
     },
     {
         "title": "Clock",
